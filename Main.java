@@ -1,23 +1,12 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 public class Main {
     public static void main(String[] args) {
+        String nome = JOptionPane.showInputDialog(null, "Informe o nome do seu animal");
+        String raca = JOptionPane.showInputDialog(null, "Raca do animal");
+        int idade = Integer.parseInt(JOptionPane.showInputDialog("Informe a idade do animal"));
+        float peso = Float.parseFloat(JOptionPane.showInputDialog(null, "Informe o peso do animal"));
         
-        Scanner sc = new Scanner(System.in);
-        
-        System.out.println("CADASTRO DE USUARIO");
-        System.out.println("Informe seu nome:");
-        String nome = sc.nextLine();
-        System.out.println("Informe sua idade:");
-        int idade = sc.nextInt();
-        System.out.println("Informe sua altura:");
-        float altura = sc.nextFloat();
-        
-        System.out.println("\nDADOS CADASTRADOS"
-                           +"\nNome: "+nome
-                           +"\nIdade: "+idade
-                           +"\nAltura: "+altura);
-        
-        
+        JOptionPane.showMessageDialog(null, "Nome: "+nome + "\nRaca: "+raca + "\nIdade: "+idade + " anos\nPeso: "+peso+" Kg");
     }
     
 }
